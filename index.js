@@ -119,7 +119,7 @@ async function app() {
   });
 
   document.getElementById("low").addEventListener("click", () => {
-    modelURL = "https://storage.googleapis.com/msi-net/model/low/model.json";
+    modelURL = "SalGAN_Discriminator.npz";
     imageDims = [48, 64];
     modelChange = true;
   });
