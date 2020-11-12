@@ -1,9 +1,3 @@
-/**
- * This script is adapted from the two tensorflowjs examples hosted at
- * https://github.com/tensorflow/tfjs-examples/tree/master/webcam-transfer-learning
- * and https://github.com/tensorflow/tfjs-models/tree/master/posenet/demos
- */
-
 const webcam = document.getElementById("webcam");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -14,11 +8,7 @@ let imageDims;
 let canvasDims;
 let modelChange;
 
-/**
- * This function captures an image from the webcam, resizes it to the preferred
- * dimensions of the selected model, and represents it in a format suitable for
- * input to the network.
- */
+
 function fetchInputImage() {
   return tf.tidy(() => {
     const webcamImage = tf.browser.fromPixels(webcam);
@@ -35,10 +25,7 @@ function fetchInputImage() {
   });
 }
 
-/**
- * A webcam image is fed to the model and the output is resized to the
- * original webcam resolution.
- */
+
 function predictSaliency() {
   return tf.tidy(() => {
     const modelOutput = model.predict(fetchInputImage());
@@ -51,12 +38,7 @@ function predictSaliency() {
   });
 }
 
-/**
- * Here the model is loaded and fed with an initial image to warm up the
- * graph execution such that the next prediction will run faster. Afterwards,
- * the network keeps on predicting saliency as long as no other model is
- * selected. The results are automatically drawn to the canvas.
- */
+
 async function runModel() {
   showLoadingScreen();
 
@@ -81,10 +63,6 @@ async function runModel() {
   runModel();
 }
 
-/**
- * When a new model is currently loading, the canvas signals a message
- * to the user.
- */
 function showLoadingScreen() {
   ctx.fillStyle = "white";
   ctx.textAlign = "center";
@@ -129,12 +107,7 @@ async function setupWebcam() {
   }
 }
 
-/**
- * The main function that first defines the default model, adds mouse click
- * listeners that interrupt the current prediction loop and invoke the loading
- * of a different model, and tries to set up a webcam stream for input to the
- * model.
- */
+
 async function app() {
   modelURL = "https://storage.googleapis.com/msi-net/model/very_low/model.json";
   imageDims = [48, 64];
