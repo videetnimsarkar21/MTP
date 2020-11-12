@@ -1,1 +1,32 @@
-<h2>Videet</h2>
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.2"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header>
+	Videet Nimsarkar (16IM30013)
+	Under the guidance of Dr. Balagopal G Menon
+  </header>
+
+  <div id="error">
+    no camera was found
+  </div>
+
+  <div id="videos">
+    <video autoplay playsinline muted id="webcam"></video>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <form class="toggle">
+    <input id="very_low" name="states" type="radio" checked="">
+    <label for="very_low" onclick="">very low</label>
+
+  </form>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
