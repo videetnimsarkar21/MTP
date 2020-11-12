@@ -120,25 +120,7 @@ async function app() {
 
   document.getElementById("low").addEventListener("click", () => {
     modelURL = "https://storage.googleapis.com/msi-net/model/low/model.json";
-    imageDims = [72, 96];
-    modelChange = true;
-  });
-
-  document.getElementById("medium").addEventListener("click", () => {
-    modelURL = "https://storage.googleapis.com/msi-net/model/medium/model.json";
-    imageDims = [120, 160];
-    modelChange = true;
-  });
-
-  document.getElementById("high").addEventListener("click", () => {
-    modelURL = "https://storage.googleapis.com/msi-net/model/high/model.json";
-    imageDims = [168, 224];
-    modelChange = true;
-  });
-
-  document.getElementById("very_high").addEventListener("click", () => {
-    modelURL = "https://storage.googleapis.com/msi-net/model/very_high/model.json";
-    imageDims = [240, 320];
+    imageDims = [48, 64];
     modelChange = true;
   });
 
