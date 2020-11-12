@@ -109,17 +109,17 @@ async function setupWebcam() {
 
 
 async function app() {
-  modelURL = "https://storage.googleapis.com/msi-net/model/very_low/model.json";
+  modelURL = "SalGAN.json";
   imageDims = [48, 64];
 
   document.getElementById("very_low").addEventListener("click", () => {
-    modelURL = "https://storage.googleapis.com/msi-net/model/very_low/model.json";
+    modelURL = "SalGAN.json";
     imageDims = [48, 64];
     modelChange = true;
   });
 
   document.getElementById("low").addEventListener("click", () => {
-    modelURL = "SalGAN.json";
+    modelURL = "SalNET.json";
     imageDims = [48, 64];
     modelChange = true;
   });
