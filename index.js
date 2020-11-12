@@ -119,7 +119,7 @@ async function app() {
   });
 
   document.getElementById("low").addEventListener("click", () => {
-    modelURL = "SalGAN_Discriminator.npz";
+    modelURL = "SalGAN.json";
     imageDims = [48, 64];
     modelChange = true;
   });
